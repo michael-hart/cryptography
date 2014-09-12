@@ -481,15 +481,15 @@ class Backend(object):
             return _EllipticCurvePrivateKey(self, ec_cdata, None)
         else:
             raise UnsupportedAlgorithm("Unsupported key type.")
-        
+
     def _evp_pkey_to_public_key(self, evp_pkey):
         """
         Return the appropriate type of PublicKey given an evp_pkey cdata
         pointer.
         """
-        
+
         type = evp_pkey.type
-        
+
         if type == self._lib.EVP_PKEY_RSA:
             rsa_cdata = self._lib.EVP_PKEY_get1_RSA(evp_pkey)
             assert rsa_cdata != self._ffi.NULL
@@ -812,7 +812,7 @@ class Backend(object):
             data,
             password,
         )
-        
+
     def load_pem_public_key(self, data):
         return self._load_key(
             self._lib.PEM_read_bio_PUBKEY,

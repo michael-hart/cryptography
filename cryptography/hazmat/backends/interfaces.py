@@ -280,7 +280,7 @@ class PEMSerializationBackend(object):
         Loads a private key from PEM encoded data, using the provided password
         if the data is encrypted.
         """
-        
+
     @abc.abstractmethod
     def load_pem_public_key(self, data, password):
         """
