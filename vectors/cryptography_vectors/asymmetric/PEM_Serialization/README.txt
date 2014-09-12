@@ -1,0 +1,12 @@
+Example test files for PEM Serialization Backend tests
+
+Contains
+
+1. ec_private_key.pem - Contains an Elliptic Curve key generated using OpenSSL, from the curve secp256k1.
+2. ec_private_key_encrypted.pem - Contains the same Elliptic Curve key as ec_private_key.pem, except that 
+   it is encrypted with AES-256 with the password "123456".
+3. rsa_private_key.pem - Contains an RSA 2048 bit key generated using OpenSSL, protected by the secret
+   "123456" with DES3 encryption
+4. dsaparam.pem - Contains 2048-bit DSA parameters generated using OpenSSL; contains no keys
+5. dsa_private_key.pem - Contains a DSA 2048 bit key generated using OpenSSL from the parameters in 
+   dsaparam.pem, protected by the secret "123456" with DES3 encryption
