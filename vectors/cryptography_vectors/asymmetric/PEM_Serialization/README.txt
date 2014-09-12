@@ -7,6 +7,8 @@ Contains
    it is encrypted with AES-256 with the password "123456".
 3. rsa_private_key.pem - Contains an RSA 2048 bit key generated using OpenSSL, protected by the secret
    "123456" with DES3 encryption
-4. dsaparam.pem - Contains 2048-bit DSA parameters generated using OpenSSL; contains no keys
-5. dsa_private_key.pem - Contains a DSA 2048 bit key generated using OpenSSL from the parameters in 
+4. rsa_public_key.pem - Contains an RSA 2048 bit public generated using OpenSSL from rsa_private_key.pem
+5. dsaparam.pem - Contains 2048-bit DSA parameters generated using OpenSSL; contains no keys
+6. dsa_private_key.pem - Contains a DSA 2048 bit key generated using OpenSSL from the parameters in 
    dsaparam.pem, protected by the secret "123456" with DES3 encryption
+7. dsa_public_key.pem - Contains a DSA 2048 bit key generated using OpenSSL from dsa_private_key.pem
